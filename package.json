@@ -1,0 +1,31 @@
+{
+  "name": "evm-log-transfer-decoder-task",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Take-home: ERC-20 Transfer log decoding (eth_getLogs shape) without ethers/viem.",
+  "main": "src/evmTransfer.js",
+  "scripts": {
+    "postinstall": "node scripts/prep-workspace.js",
+    "build:prep": "webpack --config webpack.prep.config.cjs",
+    "test": "node --test ./test/transfer-log.test.js",
+    "test:watch": "node --test --watch ./test/transfer-log.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ethereum",
+    "evm",
+    "erc-20",
+    "eth_getLogs",
+    "take-home"
+  ],
+  "dependencies": {
+    "js-sha3": "^0.9.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "license": "UNLICENSED"
+}
